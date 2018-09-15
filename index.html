@@ -2,16 +2,15 @@
 <html lang="">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single Music | Random Album Art Generator</title>
-    <link rel="stylesheet" href="https://use.typekit.net/uxw6gwv.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="flexboxgrid.min.css">
-    <script src="../p5.min.js"></script>
-    <script src="../addons/p5.dom.min.js"></script>
-    <script src="../addons/p5.sound.min.js"></script>
-    <script src="sketch.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Music | Random Album Art Generator</title>
+  <link rel="stylesheet" href="https://use.typekit.net/uxw6gwv.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="flexboxgrid.min.css">
+  <script defer src=https://CDN.JSDelivr.net/npm/p5></script>
+  <script defer src=https://CDN.JSDelivr.net/npm/p5/lib/addons/p5.dom.min.js></script>
+  <script defer src=sketch.js></script>
 </head>
 
 <body>
@@ -23,26 +22,29 @@
         <p>Here's a free high-res album art generator for use on Single Music, iTunes, Spotify, & elsewhere!</p>
         <form>
           <div>
-              <h4>Band Name</h4>
-              <input id="band_name" type="text" class="text-field"/>
+            <h4>Band Name</h4>
+            <input id="band_name" type="text" class="text-field" />
           </div>
           <div>
-              <h4 class="label">
-                Pick Some Colors
-              </h4>
-              <input id="color_1" type="color" value="#7F36AF" class="color-field"/>
-              <input id="color_2" type="color" value="#222222" class="color-field"/>
-              <input id="color_3" type="color" value="#ffffff" class="color-field"/>
+            <h4 class="label">
+              Pick Some Colors
+            </h4>
+            <input id="color_1" type="color" value="#7F36AF" class="color-field" />
+            <input id="color_2" type="color" value="#444444" class="color-field" />
+            <input id="color_3" type="color" value="#666666" class="color-field" />
+            <input id="color_4" type="color" value="#ffffff" class="color-field" />
+            <input id="color_5" type="color" value="#222222" class="color-field" />
           </div>
           <div>
-              <input type="button" id="generate" value="Generate"/>
-              <input type="button" id="generate" value="Download"/>
+            <input type="button" id="generate" value="Generate" />
+            <input type="button" id="download" value="Download" />
           </div>
         </form>
       </div>
       <div class="col-sm-12 col-md-6">
-        <div class="art-wrapper">
-          <img src="https://via.placeholder.com/1200x1200" />
+        <div id="art-wrapper" class="art-wrapper">
+          <!-- <img src="https://via.placeholder.com/1200x1200" /> -->
+          <div id="sketch"></div>
         </div>
       </div>
     </div>
